@@ -9,7 +9,7 @@ import HouseDetails from "./components/HouseDetails";
 import CartPage from "./components/CartPage";
 import CheckoutPage from "./components/CheckoutPage";
 import PropertySuccess from "./components/PropertySuccess"; // ✅ Fixed
-
+import Chatbot from "./components/Chatbot";  // correct path
 function App() {
   return (
     <Router>
@@ -23,6 +23,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/checkout-page" element={<CheckoutPage />} />
         <Route path="/property-success" element={<PropertySuccess />} />
+        <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
     </Router>
   );

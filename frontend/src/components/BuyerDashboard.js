@@ -148,7 +148,11 @@ export default function BuyerDashboard() {
         {/* Menu Bar */}
         <div style={styles.menuBar}>
           {["All", "Apartments", "Villas", "chatbox"].map((item) => (
-            <div key={item} style={styles.menuItem(activeMenu === item)} onClick={() => setActiveMenu(item)}>
+            <div key={item} style={styles.menuItem(activeMenu === item)} onClick={() =>{
+        if (item === "chatbox") navigate("/chatbot"); // go to chatbot page
+        else setActiveMenu(item); // update active menu only for house types
+      }}
+    >
               {item}
             </div>
           ))}
